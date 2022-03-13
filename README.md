@@ -1,7 +1,8 @@
 # sortowanie
 ## Prosty skrypt sortujący pliki w folderze downloads
 Skrypt dzieli pliki na podstawie rozszerzeń i przenosi je do odpowiadających folderów\
-Do uruchomienia potrzebny jest zsh, należy go najpierw zainstalować.\
+Do uruchomienia potrzebny jest zsh, należy go najpierw zainstalować.
+
 Na Ubuntu/Debianie:
 ```
 sudo apt install zsh
