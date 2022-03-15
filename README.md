@@ -11,6 +11,7 @@ $ fsrt
 Destination Directory (Default: ~/Downloads, you can also use current):
 ```
 To sort files in your Downloads folder, just press enter. To sort files in your current folder, type 'current'.
+To sort files in different directory, type desired location in the prompt.
 ## Installation
 Clone this repository:
 ```
