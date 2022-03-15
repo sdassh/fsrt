@@ -1,0 +1,56 @@
+#! /bin/zsh -
+zmodload zsh/files
+# Go to destination folder
+vared -p "Destination Directory (Default: ~/Downloads, you can also use current):" -c dfld
+if [[ $dfld == "current" ]]; then
+	dfld=$PWD
+fi
+if [[ $dfld == "" ]]; then
+	dfld='~/Downloads'
+fi
+if [ ! -d $dfld ] ; then
+	echo "Directory doesn't exist."
+	exit 0
+else
+	cd $dfld 
+	# Easily editable folder names 
+	a=pdfs_and_ebooks
+	b=images
+	c=movies_and_videos
+	d=iso_files
+	e=music
+	f=scripts
+	# Assigning file extensions to correct folders
+	typeset -A dst=(
+	  doc  $a
+	  docx $a
+	  jpg  $b
+	  jpeg $b
+	  webp $b
+	  png  $b
+	  mp4  $c
+	  mkv  $c
+	  iso  $d
+	  mp3  $e
+	  wav  $e
+	  sh   $f
+	  pdf  $a
+	  dmg  $d
+	  py   $f
+	  odf  $a
+	)
+	# If file extension isn't on the list or file doesnt have extension,
+	# move it to $default, for example others 
+	default=others
+	# Sorting files
+	
+	# If folder $dst doesnt exist, create it
+	if [[ ! -f $dst ]]; then
+		mkdir -p $dst || exit
+	# If folder $default doesn't exist, create it
+	elif [[ ! -f $default ]]; then
+		mkdir -p $default || exit
+	fi
+	# Moving files to correct directories
+	for f (*(N.)) mv -i -- $f ${dst[$f:e:l]-$default}/
+fi
