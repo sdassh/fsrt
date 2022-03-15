@@ -1,4 +1,4 @@
-# fsrt
+# fsrt (File SoRT)
 ## Command-line file sorting program written in zsh 
 <p align="center">
   <img src="https://github.com/sdassh/fsrt/blob/main/screenshot.png">
