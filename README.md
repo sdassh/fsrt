@@ -1,5 +1,9 @@
 # fsrt
 ## Command-line file sorting program written in zsh 
+<p align="center">
+  <img width="707" height="347" src="https://github.com/sdassh/fsrt/blob/main/screenshot.png">
+</p>
+
 The purpose of this script is splitting files in chosen directory to proper folders based off their extensions.
 ## Usage
 ```
