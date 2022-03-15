@@ -1,31 +1,22 @@
-# sortowanie
-## Prosty skrypt sortujący pliki w folderze downloads
-Skrypt dzieli pliki na podstawie rozszerzeń i przenosi je do odpowiadających folderów\
-Do uruchomienia potrzebny jest zsh, należy go najpierw zainstalować.
-
-Na Ubuntu/Debianie:
+# fsrt
+## Command-line file sorting program written in zsh 
+The purpose of this script is splitting files in chosen directory to proper folders based off their extensions.
+## Usage
 ```
-sudo apt install zsh
+$ fsrt
+Destination Directory (Default: ~/Downloads, you can also use current):
 ```
-Na archlinuxie/manjaro:
+To sort files in your Downloads folder, just press enter. To sort files in your current folder, type 'current'.
+## Installation
+Clone this repository:
 ```
-sudo pacman -S zsh
+git clone https://github.com/sdassh/fsrt.git; cd fsrt 
 ```
-Na fedorze:
+Next step is giving executable permission to both scripts.
 ```
-sudo dnf install zsh
+chmod +x install.sh && chmod +x fsrt
 ```
-## Używanie
+Finally, you need to execute install script as root.
 ```
-#Pobieranie skrytpu
-git clone https://github.com/sdassh/sortowanie.git
-#Zmiana w plik wykonywalny
-cd sortowanie
-chmod +x sortowanie.sh
-#Program działa z każdego folderu, więc można go 
-#przenieść do Downloads za pomocą komendy:
-mv sortowanie.sh ~/Downloads
-#Uruchomienie skryptu
-./sortowanie.sh
-# Po instalacji można usunąć folder
-rm -rf ~/sortowanie
+sudo ./install.sh
+```
